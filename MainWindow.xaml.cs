@@ -10,7 +10,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace _0804
+namespace WpfApp1
 {
     public class Person
     {
@@ -45,22 +45,25 @@ namespace _0804
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
-            Random random = new Random();
-            Person newPerson = new Person
-            {
-                strName = "Imie" + random.Next(1, 100),
-                strScname = "Drugie" + random.Next(1, 100),
-                strSname = "Nazwisko" + random.Next(1, 100),
-                strPESEL = random.Next(1000000, 99999999).ToString(),
-                strBirthday = random.Next(1, 31) + "." + random.Next(1, 12) + "." + random.Next(2000, 2025),
-                nPhoneNum = random.Next(111111111, 999999999),
+            //Random random = new Random();
+            //Person newPerson = new Person
+            //{
+            //    strName = "Imie" + random.Next(1, 100),
+            //    strScname = "Drugie" + random.Next(1, 100),
+            //    strSname = "Nazwisko" + random.Next(1, 100),
+            //    strPESEL = random.Next(1000000, 99999999).ToString(),
+            //    strBirthday = random.Next(1, 31) + "." + random.Next(1, 12) + "." + random.Next(2000, 2025),
+            //    nPhoneNum = random.Next(111111111, 999999999),
 
 
-            };
+            //};
+            //People.Add(newPerson);
+
+            Window1 window1 = new Window1();
+            window1.Show();
+
+
             
-
-
-            People.Add(newPerson);
         }
     }
 }
