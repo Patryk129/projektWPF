@@ -6,39 +6,39 @@
         xmlns:local="clr-namespace:_0804"
         mc:Ignorable="d"
         Title="Window1" Height="450" Width="800">
-	<Grid Margin="10">
-		<Label Content="DODAJ/EDYTUJ UŻYTKOWNIKA" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" FontSize="24" Height="50"/>
+    <Grid Margin="10">
+        <Label Content="DODAJ/EDYTUJ UŻYTKOWNIKA" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" FontSize="24" Height="50"/>
+        
+        <Label Content="Imię(*)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="22,70,0,0"/>
+        <TextBox x:Name="Imie" TextWrapping="Wrap" Margin="150,75,390,0" Height="25" VerticalAlignment="Top"/>
 
-		<Label Content="Imię(*)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="22,70,0,0"/>
-		<TextBox x:Name="Imie" TextWrapping="Wrap" Margin="150,75,390,0" Height="25" VerticalAlignment="Top"/>
+        <Label Content="Drugie imię" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,110,0,0"/>
+        <TextBox x:Name="Drugie_imie" TextWrapping="Wrap" Margin="150,115,390,0" Height="25" VerticalAlignment="Top"/>
 
-		<Label Content="Drugie imię" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,110,0,0"/>
-		<TextBox x:Name="Drugie_imie" TextWrapping="Wrap" Margin="150,115,390,0" Height="25" VerticalAlignment="Top"/>
+        <Label Content="Nazwisko(*)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="22,150,0,0"/>
+        <TextBox x:Name="Nazwisko" TextWrapping="Wrap" Margin="150,155,390,0" Height="25" VerticalAlignment="Top"/>
 
-		<Label Content="Nazwisko(*)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="22,150,0,0"/>
-		<TextBox x:Name="Nazwisko" TextWrapping="Wrap" Margin="150,155,390,0" Height="25" VerticalAlignment="Top"/>
+        <Label Content="Data urodzenia(*)" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,0,0,0"/>
+        <TextBox x:Name="Data_ur" TextWrapping="Wrap" Margin="150,0,390,0" Height="25" VerticalAlignment="Center"/>
 
-		<Label Content="Data urodzenia(*)" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,0,0,0"/>
-		<TextBox x:Name="Data_ur" TextWrapping="Wrap" Margin="150,0,390,0" Height="25" VerticalAlignment="Center"/>
+        <Label Content="Numer telefonu" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,231,0,0"/>
+        <TextBox x:Name="Telefon" TextWrapping="Wrap" Margin="150,235,390,0" Height="25" VerticalAlignment="Top"/>
 
-		<Label Content="Numer telefonu" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,231,0,0"/>
-		<TextBox x:Name="Telefon" TextWrapping="Wrap" Margin="150,235,390,0" Height="25" VerticalAlignment="Top"/>
+        <Label Content="Adres zamieszk.(*)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,275,0,0"/>
+        <TextBox x:Name="Adres" TextWrapping="Wrap" Margin="150,275,390,0" Height="25" VerticalAlignment="Top"/>
 
-		<Label Content="Adres zamieszk.(*)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,275,0,0"/>
-		<TextBox x:Name="Adres" TextWrapping="Wrap" Margin="150,275,390,0" Height="25" VerticalAlignment="Top"/>
+        <Label Content="Miejscowość(*)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="22,311,0,0"/>
+        <TextBox x:Name="Miejscowosc" TextWrapping="Wrap" Margin="150,315,390,0" Height="25" VerticalAlignment="Top"/>
 
-		<Label Content="Miejscowość(*)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="22,311,0,0"/>
-		<TextBox x:Name="Miejscowosc" TextWrapping="Wrap" Margin="150,315,390,0" Height="25" VerticalAlignment="Top"/>
+        <Label Content="Kod pocztowy(*)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,350,0,0"/>
+        <TextBox x:Name="Kod_pocztowy" TextWrapping="Wrap" Margin="150,355,390,0" Height="25" VerticalAlignment="Top"/>
 
-		<Label Content="Kod pocztowy(*)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,350,0,0"/>
-		<TextBox x:Name="Kod_pocztowy" TextWrapping="Wrap" Margin="150,355,390,0" Height="25" VerticalAlignment="Top"/>
+        <Label Content="PESEL(*)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="445,70,0,0" Width="61"/>
+        <TextBox x:Name="Pesel" TextWrapping="Wrap" Margin="511,75,29,0" Height="25" VerticalAlignment="Top"/>
 
-		<Label Content="PESEL(*)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="445,70,0,0" Width="61"/>
-		<TextBox x:Name="Pesel" TextWrapping="Wrap" Margin="511,75,29,0" Height="25" VerticalAlignment="Top"/>
-
-		<Button Content="OK" HorizontalAlignment="Right" Margin="0,356,131,0" Width="75" Height="30" VerticalAlignment="Top" Click="Button_Click_1"/>
-		<Button Content="Cancel" HorizontalAlignment="Right" Margin="0,356,51,0" Width="75" Height="30" VerticalAlignment="Top" Click="Button_Click"/>
+        <Button Content="OK" HorizontalAlignment="Right" Margin="0,356,131,0" Width="75" Height="30" VerticalAlignment="Top" Click="Button_Click_1"/>
+        <Button Content="Cancel" HorizontalAlignment="Right" Margin="0,356,51,0" Width="75" Height="30" VerticalAlignment="Top" Click="Button_Click"/>
 
 
-	</Grid>
+    </Grid>
 </Window>

@@ -95,14 +95,14 @@ namespace _0804
 
                         name = name.Trim();
                         name = char.ToUpper(name[0]) + name.Substring(1).ToLower();
-                        if (string.IsNullOrEmpty(name2))
+                        if(string.IsNullOrEmpty(name2))
                         {
                             name2 = name2.Trim();
                             name2 = char.ToUpper(name2[0]) + name2.Substring(1).ToLower();
                         }
 
                         surname = surname.Trim();
-                        if (surname.Contains("-"))
+                        if(surname.Contains("-"))
                         {
                             int index = surname.IndexOf("-");
                             surname = char.ToUpper(surname[0]) + surname.Substring(1, index - 1).ToLower() + char.ToUpper(surname[index + 1]) + surname.Substring(index + 2).ToLower();
