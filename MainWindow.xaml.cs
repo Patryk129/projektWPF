@@ -1,4 +1,5 @@
 ﻿using Microsoft.Win32;
+using System;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Text;
@@ -26,6 +27,18 @@ namespace _0804
         public string? strAddress { get; set; }
         public string? strPlace { get; set; }
         public string? strZipCode { get; set; }
+        public Person()
+        {
+            strName = "";
+            strScname = "";
+            strSname = "";
+            strPESEL = "00000000000";
+            strBirthday = "";
+            nPhoneNum = "";
+            strAddress = "";
+            strPlace = "";
+            strZipCode = "";
+        }
     }
 
     public partial class MainWindow : Window
@@ -72,10 +85,11 @@ namespace _0804
                             uczen.strName = columns.ElementAtOrDefault(1);
                             uczen.strScname = columns.ElementAtOrDefault(2);
                             uczen.strSname = columns.ElementAtOrDefault(3);
-                            uczen.nPhoneNum = columns.ElementAtOrDefault(4);
-                            uczen.strAddress = columns.ElementAtOrDefault(5);
-                            uczen.strPlace = columns.ElementAtOrDefault(6);
-                            uczen.strZipCode = columns.ElementAtOrDefault(7);
+                            uczen.strBirthday = columns.ElementAtOrDefault(4);
+                            uczen.nPhoneNum = columns.ElementAtOrDefault(5);
+                            uczen.strAddress = columns.ElementAtOrDefault(6);
+                            uczen.strPlace = columns.ElementAtOrDefault(7);
+                            uczen.strZipCode = columns.ElementAtOrDefault(8);
                             People.Add(uczen);
                         }
                     }
@@ -102,6 +116,7 @@ namespace _0804
                     {
                         var row = $"{item.strPESEL}{delimiter}{item.strName}" +
                         $"{delimiter}{item.strScname}{delimiter}{item.strSname}" +
+                        $"{delimiter}{item.strBirthday}" +
                         $"{delimiter}{item.nPhoneNum}{delimiter}{item.strAddress}" +
                         $"{delimiter}{item.strPlace}{delimiter}{item.strZipCode}";
                         writer.WriteLine(row);

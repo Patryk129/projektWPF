@@ -88,14 +88,14 @@ namespace _0804
             {
                 if (DateTime.TryParse(birthDate, out DateTime birthDate2))
                 {
-
+                    MessageBox.Show(birthDate);
                     if (CheckPesel(pesel, birthDate2))
                     {
                         Pesel.Background = Brushes.White;
 
                         name = name.Trim();
                         name = char.ToUpper(name[0]) + name.Substring(1).ToLower();
-                        if(string.IsNullOrEmpty(name2))
+                        if(!string.IsNullOrEmpty(name2))
                         {
                             name2 = name2.Trim();
                             name2 = char.ToUpper(name2[0]) + name2.Substring(1).ToLower();
@@ -119,21 +119,21 @@ namespace _0804
                             address = address.Substring(3).Trim();
                         }
                         address = address.Replace(" ", "");
-                        if (!string.IsNullOrEmpty(address))
+                        address = char.ToUpper(address[0]) + address.Substring(1);
+                        if (!string.IsNullOrEmpty(phoneNumber))
                         {
-                            address = char.ToUpper(address[0]) + address.Substring(1);
-                        }
-
-                        phoneNumber = phoneNumber.Trim();
-                        phoneNumber = phoneNumber.Replace("-", "");
-                        phoneNumber = phoneNumber.Replace(" ", "");
-                        if (!phoneNumber.StartsWith("+48"))
-                        {
-                            phoneNumber = "+48" + phoneNumber.Substring(1);
-                        }
-                        else if (!phoneNumber.StartsWith("+"))
-                        {
-                            phoneNumber = "+48" + phoneNumber;
+                            phoneNumber = phoneNumber.Trim();
+                            phoneNumber = phoneNumber.Replace("-", "");
+                            phoneNumber = phoneNumber.Replace(" ", "");
+                            if (!phoneNumber.StartsWith("+48"))
+                            {
+                                phoneNumber = "+48" + phoneNumber.Substring(1);
+                            }
+                            else if (!phoneNumber.StartsWith("+"))
+                            {
+                                phoneNumber = "+48" + phoneNumber;
+                            }
+                            
                         }
 
                         //DODAJ SPRAWDZENIE ADRESU!!! I NUMERU TELEFONU
@@ -176,15 +176,15 @@ namespace _0804
                 Imie.Background = Brushes.White;
             }
 
-            if (string.IsNullOrWhiteSpace(name2))
-            {
-                flag = false;
-                Drugie_imie.Background = Brushes.Red;
-            }
-            else
-            {
-                Drugie_imie.Background = Brushes.White;
-            }
+            //if (string.IsNullOrWhiteSpace(name2))
+            //{
+            //    flag = false;
+            //    Drugie_imie.Background = Brushes.Red;
+            //}
+            //else
+            //{
+            //    Drugie_imie.Background = Brushes.White;
+            //}
 
             if (string.IsNullOrWhiteSpace(surname))
             {
@@ -216,15 +216,15 @@ namespace _0804
                 Data_ur.Background = Brushes.White;
             }
 
-            if (string.IsNullOrWhiteSpace(phoneNumber))
-            {
-                flag = false;
-                Telefon.Background = Brushes.Red;
-            }
-            else
-            {
-                Telefon.Background = Brushes.White;
-            }
+            //if (string.IsNullOrWhiteSpace(phoneNumber))
+            //{
+            //    flag = false;
+            //    Telefon.Background = Brushes.Red;
+            //}
+            //else
+            //{
+            //    Telefon.Background = Brushes.White;
+            //}
 
             if (string.IsNullOrWhiteSpace(address))
             {

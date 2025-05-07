@@ -26,7 +26,7 @@
                 <GridView>
                     <GridViewColumn Header="Pesel" DisplayMemberBinding="{Binding strPESEL}" Width="70"/>
                     <GridViewColumn Header="Imię" DisplayMemberBinding="{Binding strName}" Width="50"/>
-                    <GridViewColumn Header="Drugie imię" DisplayMemberBinding="{Binding strScName}" Width="70"/>
+                    <GridViewColumn Header="Drugie imię" DisplayMemberBinding="{Binding strScname}" Width="70"/>
                     <GridViewColumn Header="Nazwisko" DisplayMemberBinding="{Binding strSname}" Width="70"/>
                     <GridViewColumn Header="Data urodzenia" DisplayMemberBinding="{Binding strBirthday}" Width="100"/>
                     <GridViewColumn Header="Numer telefonu" DisplayMemberBinding="{Binding nPhoneNum}" Width="100"/>
