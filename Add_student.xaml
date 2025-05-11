@@ -1,0 +1,54 @@
+﻿<Window x:Class="_0804.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_0804"
+        mc:Ignorable="d"
+        Title="Dodaj użytkownika" Height="450" Width="800">
+    <Grid Margin="0">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFEDEEEF" Offset="0"/>
+                <GradientStop Color="#FFBDEFAC" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="47*"/>
+            <ColumnDefinition Width="343*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="DODAJ UCZNIA" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="185,10,0,0" FontSize="36" Height="50" Grid.Column="1"/>
+
+        <Label Content="Imię(*)" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,114,0,0" FontSize="14"/>
+        <TextBox x:Name="Imie" TextWrapping="Wrap" Margin="56,118,390,0" Height="25" VerticalAlignment="Top" Grid.Column="1"/>
+
+        <Label Content="Drugie imię" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="320,119,0,0" Grid.Column="1" FontSize="14" Width="107"/>
+        <TextBox x:Name="Drugie_imie" TextWrapping="Wrap" Margin="432,123,22,0" Height="25" VerticalAlignment="Top" Grid.Column="1"/>
+
+        <Label Content="Nazwisko(*)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="22,150,0,0" Grid.ColumnSpan="2" FontSize="14"/>
+        <TextBox x:Name="Nazwisko" TextWrapping="Wrap" Margin="56,155,390,0" Height="25" VerticalAlignment="Top" Grid.Column="1"/>
+
+        <Label Content="Data urodzenia(*)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,187,0,0" Grid.ColumnSpan="2" FontSize="14"/>
+        <!--<TextBox x:Name="Data_ur" TextWrapping="Wrap" Margin="150,0,390,0" Height="25" VerticalAlignment="Center"/>-->
+        <DatePicker x:Name="Data_ur" Margin="56,188,390,0" Height="25" VerticalAlignment="Top" Grid.Column="1" BorderBrush="{x:Null}"/>
+
+        <Label Content="Numer telefonu" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,226,0,0" Grid.ColumnSpan="2" FontSize="14"/>
+        <TextBox x:Name="Telefon" TextWrapping="Wrap" Margin="56,231,390,0" Height="25" VerticalAlignment="Top" Grid.Column="1"/>
+
+        <Label Content="Adres zamieszk.(*)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,275,0,0" Grid.ColumnSpan="2" FontSize="14"/>
+        <TextBox x:Name="Adres" TextWrapping="Wrap" Margin="56,275,390,0" Height="25" VerticalAlignment="Top" Grid.Column="1"/>
+
+        <Label Content="Miejscowość(*)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="22,311,0,0" Grid.ColumnSpan="2" FontSize="14"/>
+        <TextBox x:Name="Miejscowosc" TextWrapping="Wrap" Margin="56,315,390,0" Height="25" VerticalAlignment="Top" Grid.Column="1"/>
+
+        <Label Content="Kod pocztowy(*)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="320,313,0,0" Grid.Column="1" FontSize="14"/>
+        <TextBox x:Name="Kod_pocztowy" TextWrapping="Wrap" Margin="432,315,22,0" Height="25" VerticalAlignment="Top" Grid.Column="1"/>
+
+        <Label Content="PESEL(*)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="22,76,0,0" Width="61" FontSize="14"/>
+        <TextBox x:Name="Pesel" TextWrapping="Wrap" Margin="56,76,390,0" Height="25" VerticalAlignment="Top" Grid.Column="1"/>
+
+        <Button Content="OK" HorizontalAlignment="Right" Margin="0,356,131,0" Width="75" Height="30" VerticalAlignment="Top" Click="Button_Click_1" Grid.Column="1" Background="#FFB7B5B5" Foreground="White"/>
+        <Button Content="Cancel" HorizontalAlignment="Right" Margin="0,356,51,0" Width="75" Height="30" VerticalAlignment="Top" Click="Button_Click" Grid.Column="1" Background="#FFB7B5B5" Foreground="White"/>
+
+    </Grid>
+</Window>

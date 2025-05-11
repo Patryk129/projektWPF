@@ -23,7 +23,7 @@ namespace _0804
         public string? strScname { get; set; }
         public string? strPESEL { get; set; }
         public string? strBirthday { get; set; }
-        public string? nPhoneNum { get; set; }
+        public string? strPhoneNum { get; set; }
         public string? strAddress { get; set; }
         public string? strPlace { get; set; }
         public string? strZipCode { get; set; }
@@ -34,7 +34,7 @@ namespace _0804
             strSname = "";
             strPESEL = "00000000000";
             strBirthday = "";
-            nPhoneNum = "";
+            strPhoneNum = "";
             strAddress = "";
             strPlace = "";
             strZipCode = "";
@@ -54,7 +54,9 @@ namespace _0804
         }
         private void New_Click(object sender, RoutedEventArgs e)
         {
-
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            this.Close();
         }
         private void Open_Click(object sender, RoutedEventArgs e)
         {
@@ -86,7 +88,7 @@ namespace _0804
                             uczen.strScname = columns.ElementAtOrDefault(2);
                             uczen.strSname = columns.ElementAtOrDefault(3);
                             uczen.strBirthday = columns.ElementAtOrDefault(4);
-                            uczen.nPhoneNum = columns.ElementAtOrDefault(5);
+                            uczen.strPhoneNum = columns.ElementAtOrDefault(5);
                             uczen.strAddress = columns.ElementAtOrDefault(6);
                             uczen.strPlace = columns.ElementAtOrDefault(7);
                             uczen.strZipCode = columns.ElementAtOrDefault(8);
@@ -117,7 +119,7 @@ namespace _0804
                         var row = $"{item.strPESEL}{delimiter}{item.strName}" +
                         $"{delimiter}{item.strScname}{delimiter}{item.strSname}" +
                         $"{delimiter}{item.strBirthday}" +
-                        $"{delimiter}{item.nPhoneNum}{delimiter}{item.strAddress}" +
+                        $"{delimiter}{item.strPhoneNum}{delimiter}{item.strAddress}" +
                         $"{delimiter}{item.strPlace}{delimiter}{item.strZipCode}";
                         writer.WriteLine(row);
                     }
@@ -133,41 +135,41 @@ namespace _0804
             Window1 window1 = new Window1(People);
             window1.Show();
         }
+        private void EditRecord_Click(object sender, RoutedEventArgs e)
+        {
+            if(People.Count > 0)
+            {
+                Edit_student window1 = new Edit_student(People);
+                window1.ShowDialog();
+                RefreshList();
+            }
+        }
         private void RemoveSel_Click(object sender, RoutedEventArgs e)
         {
-            while (mainList.SelectedItems.Count > 0)
-            {
-                mainList.Items.Remove(mainList.SelectedItems[0]);
-            }
-            //var selected = mainList.SelectedItems.Cast<Person>().ToList();
+            var selected = mainList.SelectedItems.Cast<Person>().ToList();
 
-            //foreach (var person in selected)
-            //{
-            //    People.Remove(person);
-            //}
+            foreach (var person in selected)
+            {
+                People.Remove(person);
+            }
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
-            //Random random = new Random();
-            //Person newPerson = new Person
-            //{
-            //    strName = "Imie" + random.Next(1, 100),
-            //    strScname = "Drugie" + random.Next(1, 100),
-            //    strSname = "Nazwisko" + random.Next(1, 100),
-            //    strPESEL = random.Next(1000000, 99999999).ToString(),
-            //    strBirthday = random.Next(1, 31) + "." + random.Next(1, 12) + "." + random.Next(2000, 2025),
-            //    nPhoneNum = random.Next(111111111, 999999999),
-
-
-            //};
-            //People.Add(newPerson);
-
             Window1 window1 = new Window1(People);
             window1.Show();
-
-
-
         }
+        public void RefreshList()
+        {
+            mainList.ItemsSource = null;
+            mainList.ItemsSource = People;
+        }
+
+        private void About(object sender, RoutedEventArgs e)
+        {
+            Info info = new Info();
+            info.Show();
+        }
+
+
     }
 }

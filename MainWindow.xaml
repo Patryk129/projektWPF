@@ -5,39 +5,55 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_0804"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" >
-    
+        Title="Baza Uczniów" Height="450" Width="800" >
+
     <Grid Margin="0,0,0,0">
-        <Menu x:Name="menu" VerticalAlignment="Top">
-            <MenuItem Header="File">
-                <MenuItem Header="New" Click="New_Click" IsEnabled="False"/>
-                <MenuItem Header="Open" Click="Open_Click"/>
-                <MenuItem Header="Save" Click="Save_Click"/>
+        <Grid.Background>
+            <LinearGradientBrush>
+                <GradientStop Color="#FFB3CDE0"/>
+                <GradientStop Color="#FF5B86E5" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Menu x:Name="menu" VerticalAlignment="Top" Foreground="Black" Background="#FFE4DFDF" Height="20">
+            <MenuItem Header="Plik">
+                <MenuItem Header="Nowy" Click="New_Click" IsEnabled="True"/>
+                <MenuItem Header="Wczytaj" Click="Open_Click"/>
+                <MenuItem Header="Zapisz" Click="Save_Click"/>
                 <Separator/>
-                <MenuItem Header="Exit" Click="Exit_Click"/>
+                <MenuItem Header="Wyjdź" Click="Exit_Click"/>
             </MenuItem>
-            <MenuItem Header="Edit">
-                <MenuItem Header="New" Click="NewRecord_Click"/>
-                <MenuItem Header="Remove Selected" Click="RemoveSel_Click"/>
+            <MenuItem Header="Edycja">
+                <MenuItem Header="Dodaj użytkownika" Click="NewRecord_Click"/>
+                <MenuItem Header="Edytuj użytkownika" Click="EditRecord_Click" x:Name="Edit"/>
+                <MenuItem Header="Usuń zaznaczonych uczniów" Click="RemoveSel_Click"/>
             </MenuItem>
-        </Menu>
-        <ListView x:Name="mainList" Margin="20,20,20,50" Background="LightGray" SelectionMode="Extended">
+            <MenuItem Header="O programie">
+                <MenuItem Header="Kliknij aby zobaczyć informacje" Click="About"/>
+            </MenuItem>
+        </Menu>
+
+        <ListView x:Name="mainList" Margin="20,35,20,35" SelectionMode="Extended" ScrollViewer.VerticalScrollBarVisibility="Auto"
+          ScrollViewer.HorizontalScrollBarVisibility="Auto" Foreground="Black" BorderBrush="#FFDCD2D2" d:ItemsSource="{d:SampleData ItemCount=5}" VerticalContentAlignment="Center">
+            <ListView.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#FFF0F4FA" Offset="0"/>
+                    <GradientStop Color="#FFB1CBEF" Offset="1"/>
+                </LinearGradientBrush>
+            </ListView.Background>
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Pesel" DisplayMemberBinding="{Binding strPESEL}" Width="70"/>
-                    <GridViewColumn Header="Imię" DisplayMemberBinding="{Binding strName}" Width="50"/>
+                    <GridViewColumn Header="Pesel" DisplayMemberBinding="{Binding strPESEL}" Width="84"/>
+                    <GridViewColumn Header="Imię" DisplayMemberBinding="{Binding strName}" Width="70"/>
                     <GridViewColumn Header="Drugie imię" DisplayMemberBinding="{Binding strScname}" Width="70"/>
                     <GridViewColumn Header="Nazwisko" DisplayMemberBinding="{Binding strSname}" Width="70"/>
                     <GridViewColumn Header="Data urodzenia" DisplayMemberBinding="{Binding strBirthday}" Width="100"/>
-                    <GridViewColumn Header="Numer telefonu" DisplayMemberBinding="{Binding nPhoneNum}" Width="100"/>
-                    <GridViewColumn Header="Adres zamieszkania" DisplayMemberBinding="{Binding strAddress}" Width="120"/>
+                    <GridViewColumn Header="Numer telefonu" DisplayMemberBinding="{Binding strPhoneNum}" Width="100"/>
+                    <GridViewColumn Header="Adres zamieszkania" DisplayMemberBinding="{Binding strAddress}" Width="110"/>
                     <GridViewColumn Header="Miejscowość" DisplayMemberBinding="{Binding strPlace}" Width="100"/>
                     <GridViewColumn Header="Kod pocztowy" DisplayMemberBinding="{Binding strZipCode}" Width="100"/>
 
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button Content="Dodaj" Margin="0,0,20,15" Click="Button_Click" Width="100" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
-
     </Grid>
 </Window>

@@ -1,0 +1,27 @@
+﻿<Window x:Class="_0804.Info"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_0804"
+        mc:Ignorable="d"
+        Title="O programie" Height="450" Width="800">
+    <Grid Margin="0">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFEDEEEF" Offset="0"/>
+                <GradientStop Color="#FFF3B76D" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <TextBlock Text="O programie" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="36" Margin="0,22,0,0"/>
+
+        <TextBlock Text="Autor: Patryk Polak" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" Margin="317,128,0,0"/>
+
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="32" Margin="0,75,0,0" Text="Baza uczniów"/>
+
+        <TextBlock Text="Opis: Aplikacja służy do wyświetlania, dodawania, edycji oraz usuwania danych uczniów. Ponadto można wczytać dane z pliku oraz zapisać dane do pliku." FontSize="20" Margin="119,175,119,144" Height="115" TextWrapping="Wrap"/>
+
+        <Button Content="OK" HorizontalAlignment="Center" VerticalAlignment="Top" Height="41" Width="166" Click="Button_Click" Margin="0,312,0,0" Background="#FFB7B5B5" Foreground="White" FontSize="20"/>
+
+    </Grid>
+</Window>
